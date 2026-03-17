@@ -82,18 +82,6 @@ const RsvpSection = () => {
               </div>
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-[0.15em] text-muted-foreground mb-2 font-medium">
-                Тілек (міндетті емес)
-              </label>
-              <textarea
-                value={form.wish}
-                onChange={(e) => update("wish", e.target.value)}
-                className="w-full border-b border-border py-3 focus:border-primary outline-none resize-none bg-transparent text-foreground"
-                rows={2}
-                placeholder="Жылы тілектеріңіз..."
-              />
-            </div>
 
             <button
               type="submit"
