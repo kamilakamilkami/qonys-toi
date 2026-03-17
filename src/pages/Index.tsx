@@ -3,6 +3,7 @@ import DetailsSection from "@/components/DetailsSection";
 import MapSection from "@/components/MapSection";
 import RsvpSection from "@/components/RsvpSection";
 import WishSection from "@/components/WishSection";
+import FooterSection from "@/components/FooterSection";
 import MusicButton from "@/components/MusicButton";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <WishSection />
       <MapSection />
       <RsvpSection />
+      <FooterSection />
     </div>
   );
 };
