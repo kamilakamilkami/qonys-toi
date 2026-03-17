@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin } from "lucide-react";
 
-const TARGET_DATE = new Date("2025-08-15T18:00:00");
+const TARGET_DATE = new Date("2026-03-28T18:00:00");
 
 const DetailsSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
