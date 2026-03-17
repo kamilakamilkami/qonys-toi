@@ -18,14 +18,7 @@ const HeroSection = () => {
           Шаңырақ шаттығы
         </span>
 
-        <motion.img
-          src={ornament}
-          alt="Қазақ ою-өрнегі"
-          className="w-48 md:w-64 mx-auto mb-6 opacity-60"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.6, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
-        />
+        <div className="w-20 h-[1px] bg-gold mx-auto mb-6" />
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-4 text-foreground">
           Қоныс той

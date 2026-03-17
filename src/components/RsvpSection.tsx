@@ -5,10 +5,8 @@ import { toast } from "sonner";
 const RsvpSection = () => {
   const [form, setForm] = useState({
     name: "",
-    phone: "",
     attending: "yes",
     guests: "1",
-    wish: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -18,7 +16,7 @@ const RsvpSection = () => {
       return;
     }
     toast.success("Рахмет! Жауабыңыз қабылданды ✨");
-    setForm({ name: "", phone: "", attending: "yes", guests: "1", wish: "" });
+    setForm({ name: "", attending: "yes", guests: "1" });
   };
 
   const update = (key: string, value: string) => setForm((f) => ({ ...f, [key]: value }));
@@ -54,18 +52,6 @@ const RsvpSection = () => {
               />
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-[0.15em] text-muted-foreground mb-2 font-medium">
-                Телефон нөміріңіз
-              </label>
-              <input
-                type="tel"
-                value={form.phone}
-                onChange={(e) => update("phone", e.target.value)}
-                className="w-full border-b border-border py-3 focus:border-primary outline-none transition-colors bg-transparent text-foreground"
-                placeholder="+7 700 000 0000"
-              />
-            </div>
 
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -96,18 +82,6 @@ const RsvpSection = () => {
               </div>
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-[0.15em] text-muted-foreground mb-2 font-medium">
-                Тілек (міндетті емес)
-              </label>
-              <textarea
-                value={form.wish}
-                onChange={(e) => update("wish", e.target.value)}
-                className="w-full border-b border-border py-3 focus:border-primary outline-none resize-none bg-transparent text-foreground"
-                rows={2}
-                placeholder="Жылы тілектеріңіз..."
-              />
-            </div>
 
             <button
               type="submit"
