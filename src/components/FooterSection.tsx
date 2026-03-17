@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import ornament from "@/assets/ornament.png";
 
 const FooterSection = () => {
   return (
@@ -14,8 +13,6 @@ const FooterSection = () => {
           Сіздерді асыға күтеміз!
         </p>
 
-        <img src={ornament} alt="" className="w-32 mx-auto opacity-40" />
-
         <a
           href="https://wa.me/77000000000"
           target="_blank"
@@ -29,7 +26,7 @@ const FooterSection = () => {
         </a>
 
         <p className="text-muted-foreground text-xs mt-8">
-          С любовью сделано для нашей семьи ❤️
+          Отбасымыз үшін сүйіспеншілікпен жасалды ❤️
         </p>
       </motion.div>
     </footer>
