@@ -1,0 +1,39 @@
+import { motion } from "framer-motion";
+import ornament from "@/assets/ornament.png";
+
+const FooterSection = () => {
+  return (
+    <footer className="py-20 text-center px-6 bg-pattern">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="space-y-8"
+      >
+        <p className="font-serif text-2xl md:text-3xl italic font-semibold">
+          Сіздерді асыға күтеміз!
+        </p>
+
+        <img src={ornament} alt="" className="w-32 mx-auto opacity-40" />
+
+        <a
+          href="https://wa.me/77000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 text-green-700 font-semibold border border-green-200 px-6 py-3 rounded-full hover:bg-green-50 transition-colors text-sm"
+        >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884 0 2.225.569 3.808 1.593 5.469l-1.037 3.794 3.933-1.03zm11.367-7.643c-.301-.15-1.779-.879-2.056-.979-.277-.101-.478-.15-.678.15-.201.3-.778 1.01-.954 1.185-.176.175-.351.196-.652.045-.301-.15-1.272-.469-2.422-1.494-.894-.797-1.498-1.782-1.674-2.082-.176-.301-.019-.463.132-.612.135-.134.301-.351.451-.526.15-.176.201-.301.301-.501.101-.201.05-.376-.025-.526-.075-.15-.678-1.634-.929-2.235-.245-.587-.493-.507-.678-.516-.175-.008-.376-.01-.578-.01-.201 0-.527.075-.803.376s-1.053 1.028-1.053 2.507c0 1.479 1.078 2.908 1.229 3.108.15.201 2.122 3.241 5.14 4.542.717.31 1.277.494 1.714.633.721.23 1.377.198 1.896.121.578-.085 1.779-.726 2.03-1.429.251-.702.251-1.303.176-1.429-.075-.126-.276-.201-.577-.351z" />
+          </svg>
+          <span>WhatsApp-пен байланысу</span>
+        </a>
+
+        <p className="text-muted-foreground text-xs mt-8">
+          С любовью сделано для нашей семьи ❤️
+        </p>
+      </motion.div>
+    </footer>
+  );
+};
+
+export default FooterSection;
