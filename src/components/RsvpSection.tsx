@@ -5,10 +5,8 @@ import { toast } from "sonner";
 const RsvpSection = () => {
   const [form, setForm] = useState({
     name: "",
-    phone: "",
     attending: "yes",
     guests: "1",
-    wish: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
