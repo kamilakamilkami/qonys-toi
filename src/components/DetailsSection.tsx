@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin } from "lucide-react";
 
-const TARGET_DATE = new Date("2025-08-15T18:00:00");
+const TARGET_DATE = new Date("2026-03-28T18:00:00");
 
 const DetailsSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
@@ -46,8 +46,8 @@ const DetailsSection = () => {
           <div className="space-y-3">
             <Calendar className="w-6 h-6 text-gold mx-auto" />
             <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium">Уақыты</p>
-            <p className="text-2xl font-serif font-semibold">15 Тамыз, 2025</p>
-            <p className="text-muted-foreground text-sm">Жұма, сағат 18:00-де</p>
+            <p className="text-2xl font-serif font-semibold">28 Наурыз, 2026</p>
+            <p className="text-muted-foreground text-sm">Дүйсенбі, сағат 18:00-де</p>
           </div>
 
           <div className="space-y-3">
