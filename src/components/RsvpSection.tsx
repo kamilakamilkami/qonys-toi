@@ -16,7 +16,7 @@ const RsvpSection = () => {
       return;
     }
     toast.success("Рахмет! Жауабыңыз қабылданды ✨");
-    setForm({ name: "", phone: "", attending: "yes", guests: "1", wish: "" });
+    setForm({ name: "", attending: "yes", guests: "1" });
   };
 
   const update = (key: string, value: string) => setForm((f) => ({ ...f, [key]: value }));
