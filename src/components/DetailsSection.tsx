@@ -46,8 +46,8 @@ const DetailsSection = () => {
           <div className="space-y-3">
             <Calendar className="w-6 h-6 text-gold mx-auto" />
             <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium">Уақыты</p>
-            <p className="text-2xl font-serif font-semibold">15 Тамыз, 2025</p>
-            <p className="text-muted-foreground text-sm">Жұма, сағат 18:00-де</p>
+            <p className="text-2xl font-serif font-semibold">28 Наурыз, 2026</p>
+            <p className="text-muted-foreground text-sm">Дүйсенбі, сағат 18:00-де</p>
           </div>
 
           <div className="space-y-3">

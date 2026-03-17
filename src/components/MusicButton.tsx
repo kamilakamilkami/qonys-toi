@@ -31,7 +31,7 @@ const MusicButton = () => {
       </button>
       <audio ref={audioRef} loop preload="none">
         <source
-          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          src="https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/nLHfVnQaTJHFW8GkjyzR4bMwxGesx0VuiCaYRE3t.mp3"
           type="audio/mpeg"
         />
       </audio>
