@@ -27,7 +27,7 @@ const MapSection = () => {
         >
           <div className="text-center space-y-3">
             <MapPin className="w-12 h-12 text-gold mx-auto" />
-            <p className="text-muted-foreground text-sm">Тастемір 22, Жанқоныс</p>
+            <p className="text-muted-foreground text-sm"><p className="text-muted-foreground text-sm">Тастемір 22, Жаңақоныс</p></p>
           </div>
         </motion.div>
 

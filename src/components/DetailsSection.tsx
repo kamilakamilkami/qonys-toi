@@ -53,7 +53,7 @@ const DetailsSection = () => {
           <div className="space-y-3">
             <MapPin className="w-6 h-6 text-gold mx-auto" />
             <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium">Мекен-жайы</p>
-            <p className="text-xl font-serif font-semibold text-balance">Ақтөбе қ., Жанқоныс, Тастемір 22</p>
+            <p className="text-xl font-serif font-semibold text-balance"><p className="text-xl font-serif font-semibold text-balance">Ақтөбе қ., Жаңақоныс, Тастемір 22</p></p>
           </div>
 
           <div className="space-y-3">
