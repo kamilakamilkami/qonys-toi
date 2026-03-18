@@ -23,7 +23,7 @@ const RsvpSection = () => {
       const { error } = await supabase.from("rsvp_responses").insert({
         name: form.name.trim(),
         attending: form.attending,
-        guests: parseInt(form.guests) || 1,
+        guests: parseInt(form.guests) || 0,
       });
 
       if (error) throw error;
