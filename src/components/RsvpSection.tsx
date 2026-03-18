@@ -29,7 +29,7 @@ const RsvpSection = () => {
       if (error) throw error;
 
       toast.success("Рахмет! Жауабыңыз қабылданды ✨");
-      setForm({ name: "", attending: "yes", guests: "1" });
+      setForm({ name: "", attending: "yes", guests: "" });
     } catch (err) {
       console.error("RSVP error:", err);
       toast.error("Қате болды, қайталап көріңіз");
