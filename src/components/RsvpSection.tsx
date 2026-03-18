@@ -92,7 +92,8 @@ const RsvpSection = () => {
                 </label>
                 <input
                   type="number"
-                  min="1"
+                  min="0"
+                  placeholder="0"
                   max="10"
                   value={form.guests}
                   onChange={(e) => update("guests", e.target.value)}

@@ -58,6 +58,16 @@ const HeroSection = () => {
         </p>
       </motion.div>
 
+      {/* Music hint */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="text-xs text-muted-foreground/60 mt-8 tracking-wide z-10"
+      >
+        🎵 Музыканы қосыңыз — жоғарғы оң жақтағы батырманы басыңыз
+      </motion.p>
+
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
