@@ -14,7 +14,7 @@ const MapSection = () => {
             Қалай жетуге болады?
           </h2>
           <p className="text-muted-foreground mb-8 text-sm">
-            Ақтөбе қ., Жанқоныс, Тастемір 22
+            Ақтөбе қ., Жаңақоныс, Тастемір 22
           </p>
         </motion.div>
 
