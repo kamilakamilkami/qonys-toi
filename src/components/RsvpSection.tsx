@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const RsvpSection = () => {
   const [form, setForm] = useState({
@@ -8,15 +9,33 @@ const RsvpSection = () => {
     attending: "yes",
     guests: "1",
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim()) {
       toast.error("Атыңызды жазыңыз");
       return;
     }
-    toast.success("Рахмет! Жауабыңыз қабылданды ✨");
-    setForm({ name: "", attending: "yes", guests: "1" });
+
+    setLoading(true);
+    try {
+      const { error } = await supabase.from("rsvp_responses").insert({
+        name: form.name.trim(),
+        attending: form.attending,
+        guests: parseInt(form.guests) || 1,
+      });
+
+      if (error) throw error;
+
+      toast.success("Рахмет! Жауабыңыз қабылданды ✨");
+      setForm({ name: "", attending: "yes", guests: "1" });
+    } catch (err) {
+      console.error("RSVP error:", err);
+      toast.error("Қате болды, қайталап көріңіз");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const update = (key: string, value: string) => setForm((f) => ({ ...f, [key]: value }));
@@ -49,9 +68,9 @@ const RsvpSection = () => {
                 onChange={(e) => update("name", e.target.value)}
                 className="w-full border-b border-border py-3 focus:border-primary outline-none transition-colors bg-transparent text-foreground"
                 placeholder="Мысалы: Арман"
+                maxLength={100}
               />
             </div>
-
 
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -82,12 +101,12 @@ const RsvpSection = () => {
               </div>
             </div>
 
-
             <button
               type="submit"
-              className="w-full gradient-gold text-primary-foreground py-4 rounded-xl font-semibold shadow-gold hover:-translate-y-0.5 transition-all text-sm tracking-wide"
+              disabled={loading}
+              className="w-full gradient-gold text-primary-foreground py-4 rounded-xl font-semibold shadow-gold hover:-translate-y-0.5 transition-all text-sm tracking-wide disabled:opacity-50"
             >
-              Жіберу
+              {loading ? "Жіберілуде..." : "Жіберу"}
             </button>
           </form>
         </motion.div>
