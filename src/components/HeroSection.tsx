@@ -54,7 +54,7 @@ const HeroSection = () => {
           Үй иелері
         </p>
         <p className="text-2xl md:text-3xl font-serif text-gold font-semibold">
-          Тоқжан, Дулат
+          Тоғжан & Дулат
         </p>
       </motion.div>
 
