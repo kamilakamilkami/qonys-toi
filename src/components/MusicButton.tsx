@@ -31,7 +31,7 @@ const MusicButton = () => {
       </button>
       <audio ref={audioRef} loop preload="none">
         <source
-          src="https://files.freemusicarchive.org/storage-freemusicarchive-org/tracks/nLHfVnQaTJHFW8GkjyzR4bMwxGesx0VuiCaYRE3t.mp3"
+          src="/music/kutty-bolsyn.mp3"
           type="audio/mpeg"
         />
       </audio>
