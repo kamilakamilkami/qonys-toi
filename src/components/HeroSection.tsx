@@ -34,7 +34,7 @@ const HeroSection = () => {
         className="space-y-4 mb-12 relative z-10"
       >
         <p className="text-xl md:text-2xl font-serif italic text-muted-foreground">
-          Құрметті ағайын-туыс, бауырлар!
+          Құрметті достар!
         </p>
         <p className="max-w-md mx-auto leading-relaxed text-muted-foreground text-sm md:text-base">
           Жаңа шаңырағымыздың босағасын аттап, қуанышымызды сіздермен бірге
