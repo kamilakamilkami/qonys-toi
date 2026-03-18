@@ -34,7 +34,7 @@ const HeroSection = () => {
         className="space-y-4 mb-12 relative z-10"
       >
         <p className="text-xl md:text-2xl font-serif italic text-muted-foreground">
-          Құрметті ағайын-туыс, бауырлар!
+          Құрметті достар!
         </p>
         <p className="max-w-md mx-auto leading-relaxed text-muted-foreground text-sm md:text-base">
           Жаңа шаңырағымыздың босағасын аттап, қуанышымызды сіздермен бірге
@@ -57,6 +57,16 @@ const HeroSection = () => {
           Тоқжан, Дулат
         </p>
       </motion.div>
+
+      {/* Music hint */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="text-xs text-muted-foreground/60 mt-8 tracking-wide z-10"
+      >
+        🎵 Музыканы қосыңыз — жоғарғы оң жақтағы батырманы басыңыз
+      </motion.p>
 
       {/* Scroll indicator */}
       <motion.div

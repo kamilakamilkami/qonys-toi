@@ -7,7 +7,7 @@ const RsvpSection = () => {
   const [form, setForm] = useState({
     name: "",
     attending: "yes",
-    guests: "1",
+    guests: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -23,13 +23,13 @@ const RsvpSection = () => {
       const { error } = await supabase.from("rsvp_responses").insert({
         name: form.name.trim(),
         attending: form.attending,
-        guests: parseInt(form.guests) || 1,
+        guests: parseInt(form.guests) || 0,
       });
 
       if (error) throw error;
 
       toast.success("Рахмет! Жауабыңыз қабылданды ✨");
-      setForm({ name: "", attending: "yes", guests: "1" });
+      setForm({ name: "", attending: "yes", guests: "" });
     } catch (err) {
       console.error("RSVP error:", err);
       toast.error("Қате болды, қайталап көріңіз");
@@ -92,7 +92,8 @@ const RsvpSection = () => {
                 </label>
                 <input
                   type="number"
-                  min="1"
+                  min="0"
+                  placeholder="0"
                   max="10"
                   value={form.guests}
                   onChange={(e) => update("guests", e.target.value)}
