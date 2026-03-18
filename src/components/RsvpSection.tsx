@@ -7,7 +7,7 @@ const RsvpSection = () => {
   const [form, setForm] = useState({
     name: "",
     attending: "yes",
-    guests: "1",
+    guests: "",
   });
   const [loading, setLoading] = useState(false);
 
