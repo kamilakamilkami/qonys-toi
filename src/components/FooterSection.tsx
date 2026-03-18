@@ -13,10 +13,6 @@ const FooterSection = () => {
         <p className="font-serif text-2xl md:text-3xl font-semibold">
           Рахмет!
         </p>
-        <p className="text-muted-foreground text-sm max-w-md mx-auto leading-relaxed">
-          Біздің тойға қатысуға уақыт бөлгеніңізге алғысымыз шексіз.
-          Сіздің қатысуыңыз — біз үшін ең үлкен сыйлық!
-        </p>
         <p className="text-muted-foreground text-xs pt-4">
           Сүйіспеншілікпен жасалды ❤️
         </p>
