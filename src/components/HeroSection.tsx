@@ -20,7 +20,7 @@ const HeroSection = () => {
         style={{ animationDelay: "4s" }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-7rem)] max-w-4xl flex-col items-center justify-center">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-7rem)] max-w-5xl flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,13 +32,13 @@ const HeroSection = () => {
             animate={{ opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            Шаңырақ шаттығы
+            Үш қуаныш бірге келген
           </motion.span>
 
           <div className="glow-line mx-auto mb-6 w-24 sm:mb-8 sm:w-32" />
 
-          <h1 className="mb-4 font-serif text-5xl font-semibold leading-[0.95] tracking-[0.04em] gold-shimmer sm:mb-6 sm:text-6xl md:text-8xl lg:text-9xl">
-            Қоныс той
+          <h1 className="mb-4 font-serif text-4xl font-semibold leading-[0.95] tracking-[0.04em] gold-shimmer sm:mb-6 sm:text-5xl md:text-7xl lg:text-8xl">
+            Берекелі шаңырақ
           </h1>
 
           <div className="glow-line mx-auto mb-8 w-24 sm:mb-10 sm:w-32" />
@@ -51,13 +51,18 @@ const HeroSection = () => {
           className="relative z-10 mb-6 w-full px-1 sm:mb-8"
         >
           <p className="font-serif text-[1.35rem] italic font-medium tracking-[0.04em] text-gold text-glow sm:text-2xl md:text-3xl">
-            Құрметті достар!
+            Ардақты достар, қимас бауырлар!
           </p>
 
-          <p className="mx-auto mt-4 max-w-2xl text-[15px] font-light leading-[1.95] tracking-[0.015em] text-foreground/85 sm:text-base md:text-lg">
-            Жаңа шаңырағымыздың босағасын аттап, қуанышымызды сіздермен бірге
-            бөлісуге шақырамыз. Ақ тілектеріңіз бен жылы лебіздеріңіз біз үшін
-            үлкен мәртебе!
+          <p className="mx-auto mt-4 max-w-3xl text-[15px] font-light leading-[1.95] tracking-[0.015em] text-foreground/85 sm:text-base md:text-lg">
+            Өмірдің белестері мен қуаныштары тоғысқан сәтте сіздермен қауышу —
+            біз үшін үлкен бақыт.
+          </p>
+
+          <p className="mx-auto mt-4 max-w-4xl text-[15px] font-light leading-[1.95] tracking-[0.015em] text-foreground/85 sm:text-base md:text-lg">
+            Ақ босаға аттаған жаңа үйіміздің төрінде, 15 жыл аңсап күткен
+            ұлымыз Мирас дүниеге келген қуанышта және бөлім басшысы атану
+            мәртебесінде ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
           </p>
         </motion.div>
 
@@ -83,6 +88,10 @@ const HeroSection = () => {
 
           <p className="text-center font-serif text-[2.1rem] font-semibold leading-tight tracking-[0.03em] gold-shimmer sm:text-5xl">
             Дулат & Тоғжан
+          </p>
+
+          <p className="mt-3 text-center text-sm tracking-[0.08em] text-gold/75 sm:text-base">
+            Ұлдары — Мирас
           </p>
         </motion.div>
 
