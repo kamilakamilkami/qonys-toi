@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    --background: 36 33% 98%;
-    --foreground: 20 10% 15%;
+    --background: 220 15% 13%;
+    --foreground: 40 30% 90%;
 
-    --card: 36 30% 97%;
-    --card-foreground: 20 10% 15%;
+    --card: 220 12% 16%;
+    --card-foreground: 40 30% 90%;
 
-    --popover: 36 33% 98%;
-    --popover-foreground: 20 10% 15%;
+    --popover: 220 15% 13%;
+    --popover-foreground: 40 30% 90%;
 
-    --primary: 38 42% 55%;
-    --primary-foreground: 36 33% 98%;
+    --primary: 38 55% 58%;
+    --primary-foreground: 220 15% 10%;
 
-    --secondary: 35 40% 94%;
-    --secondary-foreground: 20 10% 15%;
+    --secondary: 220 10% 20%;
+    --secondary-foreground: 40 30% 90%;
 
-    --muted: 35 20% 93%;
-    --muted-foreground: 20 8% 45%;
+    --muted: 220 10% 22%;
+    --muted-foreground: 40 15% 60%;
 
-    --accent: 35 40% 94%;
-    --accent-foreground: 20 10% 15%;
+    --accent: 220 10% 20%;
+    --accent-foreground: 40 30% 90%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 25% 88%;
-    --input: 35 25% 88%;
-    --ring: 38 42% 55%;
+    --border: 38 20% 30%;
+    --input: 38 20% 30%;
+    --ring: 38 55% 58%;
 
     --radius: 0.75rem;
 
-    --gold: 38 42% 55%;
-    --gold-light: 38 50% 70%;
-    --gold-glow: 38 60% 80%;
-    --paper: 36 33% 98%;
-    --sand: 35 40% 94%;
-    --warm-gray: 20 8% 45%;
+    --gold: 38 55% 58%;
+    --gold-light: 38 60% 72%;
+    --gold-glow: 38 70% 80%;
+    --paper: 220 15% 13%;
+    --sand: 220 10% 18%;
+    --warm-gray: 40 15% 60%;
 
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Plus Jakarta Sans', sans-serif;
 
-    --shadow-gold: 0 10px 40px -10px hsl(38 42% 55% / 0.25);
-    --shadow-card: 0 20px 60px -15px hsl(20 10% 15% / 0.08);
-    --gradient-gold: linear-gradient(135deg, hsl(38 42% 55%), hsl(38 60% 70%));
+    --shadow-gold: 0 10px 40px -10px hsl(38 55% 58% / 0.35);
+    --shadow-card: 0 20px 60px -15px hsl(0 0% 0% / 0.4);
+    --gradient-gold: linear-gradient(135deg, hsl(38 55% 58%), hsl(38 70% 72%));
   }
 }
 
@@ -109,6 +109,56 @@
   }
 
   .bg-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z' fill='none' stroke='%23C5A059' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
+    background-image: none;
+  }
+
+  /* Glowing gold text */
+  .text-glow {
+    text-shadow: 0 0 20px hsl(38 55% 58% / 0.5), 0 0 40px hsl(38 55% 58% / 0.3), 0 0 80px hsl(38 55% 58% / 0.15);
+  }
+
+  .text-glow-sm {
+    text-shadow: 0 0 10px hsl(38 55% 58% / 0.4), 0 0 20px hsl(38 55% 58% / 0.2);
+  }
+
+  /* Gold shimmer effect */
+  .gold-shimmer {
+    background: linear-gradient(
+      110deg,
+      hsl(38 55% 58%) 0%,
+      hsl(38 70% 78%) 25%,
+      hsl(38 55% 58%) 50%,
+      hsl(38 70% 78%) 75%,
+      hsl(38 55% 58%) 100%
+    );
+    background-size: 300% 100%;
+    animation: shimmer-gold 4s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes shimmer-gold {
+    0% { background-position: 300% 0; }
+    100% { background-position: -300% 0; }
+  }
+
+  /* Floating particles glow */
+  .glow-orb {
+    background: radial-gradient(circle, hsl(38 55% 58% / 0.25) 0%, transparent 70%);
+    filter: blur(30px);
+    animation: float-glow 6s ease-in-out infinite;
+  }
+
+  @keyframes float-glow {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-20px) scale(1.1); opacity: 1; }
+  }
+
+  /* Section divider glow line */
+  .glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(38 55% 58% / 0.6), transparent);
+    box-shadow: 0 0 15px hsl(38 55% 58% / 0.3);
   }
 }
