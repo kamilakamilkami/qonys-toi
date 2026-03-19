@@ -50,23 +50,13 @@ const WishSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.45, duration: 0.7 }}
-          className="mb-5 text-sm leading-relaxed text-foreground/75 md:text-base"
+          transition={{ delay: 0.6, duration: 0.7 }}
+          className="font-serif text-sm italic leading-relaxed text-gold/80 text-glow-sm md:text-base"
         >
           Үш қуаныш — бұл жай той емес, бұл өміріміздегі жаңа кезеңнің,
           жаңа белестің басталуы.
         </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.7 }}
-          className="font-serif text-sm italic leading-relaxed text-gold/80 text-glow-sm md:text-base"
-        >
-          Мирастың бауы берік болсын! Нағыз азамат болып өссін. Жұмыстағы жаңа
-          қызмет құтты болсын!
-        </motion.p>
+        
       </motion.div>
 
       <div className="absolute bottom-0 left-0 right-0 glow-line" />

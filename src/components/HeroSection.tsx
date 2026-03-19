@@ -91,7 +91,7 @@ const HeroSection = () => {
           </p>
 
           <p className="mt-3 text-center text-sm tracking-[0.08em] text-gold/75 sm:text-base">
-            Ұлдары — Мирас
+            Ұлымыз — Мирас
           </p>
         </motion.div>
 
