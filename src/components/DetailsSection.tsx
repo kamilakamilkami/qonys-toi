@@ -33,43 +33,64 @@ const DetailsSection = () => {
     { value: timeLeft.secs, label: "Сек" },
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } }
+  };
+
   return (
-    <section className="py-20 px-6 bg-card/50 backdrop-blur-sm">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-20 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-card/80" />
+      <div className="absolute top-0 left-0 right-0 glow-line" />
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
           className="grid md:grid-cols-3 gap-10 text-center mb-16"
         >
-          <div className="space-y-3">
+          <motion.div variants={itemVariants} className="space-y-3">
             <Calendar className="w-6 h-6 text-gold mx-auto" />
-            <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium">Уақыты</p>
-            <p className="text-2xl font-serif font-semibold">28 Наурыз, 2026</p>
-            <p className="text-muted-foreground text-sm">Дүйсенбі, сағат 18:00-де</p>
-          </div>
+            <p className="text-gold text-glow-sm uppercase tracking-[0.15em] text-xs font-medium">Уақыты</p>
+            <p className="text-2xl font-serif font-semibold text-foreground">28 Наурыз, 2026</p>
+            <p className="text-muted-foreground text-sm">Сенбі, сағат 18:00-де</p>
+          </motion.div>
 
-          <div className="space-y-3">
+          <motion.div variants={itemVariants} className="space-y-3">
             <MapPin className="w-6 h-6 text-gold mx-auto" />
-            <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium">Мекен-жайы</p>
-            <p className="text-xl font-serif font-semibold text-balance"><p className="text-xl font-serif font-semibold text-balance">Ақтөбе қ., Жаңақоныс, Тастемір 22</p></p>
-          </div>
+            <p className="text-gold text-glow-sm uppercase tracking-[0.15em] text-xs font-medium">Мекен-жайы</p>
+            <p className="text-xl font-serif font-semibold text-foreground text-balance">Ақтөбе қ., Жаңақоныс, Тастемір 22</p>
+          </motion.div>
 
-          <div className="space-y-3">
+          <motion.div variants={itemVariants} className="space-y-3">
             <Clock className="w-6 h-6 text-gold mx-auto" />
-            <p className="text-gold uppercase tracking-[0.15em] text-xs font-medium">Кері санақ</p>
+            <p className="text-gold text-glow-sm uppercase tracking-[0.15em] text-xs font-medium">Кері санақ</p>
             <div className="flex justify-center gap-3">
               {timerBlocks.map((b) => (
-                <div key={b.label} className="bg-background rounded-lg p-3 min-w-[56px] shadow-card">
-                  <p className="text-2xl font-serif font-bold text-foreground">{String(b.value).padStart(2, "0")}</p>
+                <motion.div
+                  key={b.label}
+                  className="bg-background/60 backdrop-blur-sm rounded-lg p-3 min-w-[56px] shadow-card border border-border/50"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <p className="text-2xl font-serif font-bold text-gold text-glow-sm">{String(b.value).padStart(2, "0")}</p>
                   <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{b.label}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 glow-line" />
     </section>
   );
 };
